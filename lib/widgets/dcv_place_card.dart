@@ -170,7 +170,7 @@ class _DCVArticleCardBody extends StatelessWidget {
             child: const Icon(
               Icons.play_arrow,
               color: kPrimaryColor,
-              size: 30,
+              size: 45,
             ),
           ),
           const SizedBox(width: 10),
