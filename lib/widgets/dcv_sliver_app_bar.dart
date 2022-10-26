@@ -10,11 +10,11 @@ class DCVSliverAppBar extends StatefulWidget {
 }
 
 class _DCVSliverAppBarState extends State<DCVSliverAppBar> {
-  var _selectedIdx = 0;
+  var _selectedIdx = 1;
 
   @override
   Widget build(BuildContext context) {
-    final cities = ['Kyoto', 'Tokyo', 'Sapporo', 'Osaka'];
+    final cities = ['Philippines', 'Japan', 'S. Korea', 'Norway'];
 
     return SliverAppBar(
       backgroundColor: Colors.white,
