@@ -1,14 +1,26 @@
 import 'package:flutter/material.dart';
+import '../widgets/dcv_tab_bar.dart';
 import '../utils/constants.dart';
 
-class DCVSliverAppBar extends StatelessWidget {
+class DCVSliverAppBar extends StatefulWidget {
   const DCVSliverAppBar({super.key});
 
   @override
+  State<DCVSliverAppBar> createState() => _DCVSliverAppBarState();
+}
+
+class _DCVSliverAppBarState extends State<DCVSliverAppBar> {
+  var _selectedIdx = 0;
+
+  @override
   Widget build(BuildContext context) {
+    final cities = ['Kyoto', 'Tokyo', 'Sapporo', 'Osaka'];
+
     return SliverAppBar(
       backgroundColor: Colors.white,
       leadingWidth: 70,
+      pinned: true,
+      title: Image.asset('assets/images/logo_discover.png'),
       leading: Padding(
         padding: const EdgeInsets.only(left: 0),
         child: InkWell(
@@ -20,7 +32,6 @@ class DCVSliverAppBar extends StatelessWidget {
           ),
         ),
       ),
-      title: Image.asset('assets/images/logo_discover.png'),
       actions: [
         Padding(
           padding: const EdgeInsets.only(right: 10),
@@ -38,6 +49,17 @@ class DCVSliverAppBar extends StatelessWidget {
           ),
         ),
       ],
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(80),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 15),
+          child: DCVTabBar(
+            cities: cities,
+            selectedIndex: _selectedIdx,
+            onTap: (idx) => setState(() => _selectedIdx = idx),
+          ),
+        ),
+      ),
     );
   }
 }
