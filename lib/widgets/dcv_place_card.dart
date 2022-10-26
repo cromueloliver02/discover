@@ -188,7 +188,7 @@ class _DCVArticleCardBody extends StatelessWidget {
                 const SizedBox(height: 10),
                 Flexible(
                   child: Text(
-                    location,
+                    location.toUpperCase(),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(
