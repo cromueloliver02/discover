@@ -44,6 +44,8 @@ class DCVArticleCard extends StatelessWidget {
               child: _DCVArticleCardBody(
                 title: article.title,
                 location: article.location,
+                ratings: article.ratings,
+                reviews: article.reviews,
               ),
             ),
           ),
@@ -140,11 +142,15 @@ class _DCVArticleCardHeader extends StatelessWidget {
 class _DCVArticleCardBody extends StatelessWidget {
   final String title;
   final String location;
+  final double ratings;
+  final int reviews;
 
   const _DCVArticleCardBody({
     Key? key,
     required this.title,
     required this.location,
+    required this.ratings,
+    required this.reviews,
   }) : super(key: key);
 
   @override
@@ -198,11 +204,62 @@ class _DCVArticleCardBody extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    _DCVArticleCardRatings(ratings: ratings),
+                    const SizedBox(width: 10),
+                    Text(
+                      '$reviews reviews',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class _DCVArticleCardRatings extends StatelessWidget {
+  final double ratings;
+
+  const _DCVArticleCardRatings({
+    Key? key,
+    required this.ratings,
+  }) : super(key: key);
+
+  Widget getStar(double rate) {
+    IconData iconData = Icons.star;
+
+    if (rate <= 0) iconData = Icons.star_border;
+    if (rate > 0 && rate < 1) iconData = Icons.star_half_outlined;
+    if (rate >= 1) iconData = Icons.star;
+
+    return Icon(
+      iconData,
+      color: Colors.yellow,
+      size: 18,
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        getStar(ratings),
+        getStar(ratings - 1),
+        getStar(ratings - 2),
+        getStar(ratings - 3),
+        getStar(ratings - 4),
+      ],
     );
   }
 }

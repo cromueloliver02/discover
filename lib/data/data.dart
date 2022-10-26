@@ -7,6 +7,8 @@ class Article {
   final int likes;
   final int comments;
   final int shares;
+  final double ratings;
+  final int reviews;
   bool isLiked = false;
 
   Article({
@@ -18,6 +20,8 @@ class Article {
     required this.location,
     required this.shares,
     required this.author,
+    required this.ratings,
+    required this.reviews,
     required this.authorImage,
   });
 }
@@ -34,6 +38,8 @@ List<Article> articles = [
     location: 'Osaka, Japan',
     shares: 50,
     author: 'Kentarō Hiroki',
+    ratings: 4.8,
+    reviews: 827,
     authorImage:
         'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   ),
@@ -48,6 +54,8 @@ List<Article> articles = [
     location: 'Tokyo, Japan',
     shares: 1250,
     author: 'Minako Kanna',
+    ratings: 4.3,
+    reviews: 1327,
     authorImage:
         'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80',
   ),
@@ -62,6 +70,8 @@ List<Article> articles = [
     location: 'Kyoto, Japan',
     shares: 1000,
     author: 'Kumiko Yumiko',
+    ratings: 3.8,
+    reviews: 427,
     authorImage:
         'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2053&q=80',
   ),
