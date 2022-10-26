@@ -3,6 +3,7 @@ class Article {
   final String image;
   final String location;
   final String author;
+  final String authorImage;
   final int likes;
   final int comments;
   final int shares;
@@ -17,6 +18,7 @@ class Article {
     required this.location,
     required this.shares,
     required this.author,
+    required this.authorImage,
   });
 }
 
@@ -24,34 +26,40 @@ List<Article> articles = [
   Article(
     title: 'Japan\'s second largest metropolitan area',
     image:
-        'https://images.wallpaperscraft.com/image/pagoda_architecture_sunlight_131905_1920x1080.jpg',
+        'https://www.planetware.com/photos-large/JPN/japan-attractions-hiroshima-itsukushima.jpg',
     comments: 100,
     likes: 32000,
     isLiked: true,
     location: 'Osaka Japan',
     shares: 50,
-    author: 'Hussain Mustafa',
+    author: 'Kentarō Hiroki',
+    authorImage:
+        'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80',
   ),
   Article(
     title: 'Known as the sleepless town for obvious reasons',
     image:
-        'https://images.wallpaperscraft.com/image/night_lights_buildings_railway_station_ueno_tokyo_59511_1920x1080.jpg',
+        'https://worldtourtips.com/wp-content/uploads/2020/11/Japan-1-e1606077075928.jpg',
     comments: 300,
     likes: 50000,
     isLiked: true,
     location: 'Kabuikicho Japan',
     shares: 1250,
-    author: 'Tim Salvatore',
+    author: 'Minako Kanna',
+    authorImage:
+        'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80',
   ),
   Article(
     title: 'Japan\'s second largest metropolitan area',
     image:
-        'https://images.wallpaperscraft.com/image/street_neon_night_city_139596_1920x1080.jpg',
+        'https://blog.japanwondertravel.com/wp-content/uploads/2018/12/sorasak-_UIN-pFfJ7c-unsplash.jpg',
     comments: 200,
     likes: 10000,
     isLiked: true,
     location: 'Tokyo Japan',
     shares: 1000,
-    author: 'Ely Marya',
+    author: 'Kumiko Yumiko',
+    authorImage:
+        'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2053&q=80',
   ),
 ];
