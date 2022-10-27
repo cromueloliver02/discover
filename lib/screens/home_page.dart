@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/dcv_sliver_app_bar.dart';
-import '../widgets/dcv_place_card.dart';
+import '../widgets/dcv_article_card.dart';
 import '../data/data.dart';
 
 class HomePage extends StatelessWidget {

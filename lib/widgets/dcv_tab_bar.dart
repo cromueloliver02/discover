@@ -63,17 +63,15 @@ class _DCVTab extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Center(
-            child: Flexible(
-              child: Container(
-                color: Colors.transparent,
-                padding: const EdgeInsets.all(10),
-                child: Text(
-                  city,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: Colors.grey[400],
-                    fontSize: 18,
-                  ),
+            child: Container(
+              color: Colors.transparent,
+              padding: const EdgeInsets.all(10),
+              child: Text(
+                city,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: Colors.grey[400],
+                  fontSize: 18,
                 ),
               ),
             ),
